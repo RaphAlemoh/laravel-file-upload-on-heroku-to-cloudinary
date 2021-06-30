@@ -18,13 +18,13 @@
                         @if (Auth::user()->avatar_url != NULL)
                             <img class="figure-img img-fluid img-circle profile-avatar" src="{{ URL::to(Auth::user()->getAvatarUrl()) }}" width="200" height="150" alt="profile photo" />
                         @else
-                            <img class="figure-img img-fluid img-circle profile-avatar" src="{{ URL::to('images/avatar.png') }}" width="100" height="100" alt="profile photo">
+                            <img class="figure-img img-fluid img-circle profile-avatar" src="{{ URL::to('images/avatar.jpg') }}" width="100" height="100" alt="profile photo">
                         @endif
                    <figcaption class="figure-caption text-xs-center">
                        <strong>{{ Auth::user()->name }}</strong>
                    </figcaption>
                </figure>
-               
+
                 </div>
             </div>
         </div>

@@ -31,13 +31,14 @@ class MediaController extends Controller
                 $image_public_id_exist = User::select('public_id')->where('id', Auth::user()->id)->get();
                 Cloudder::delete($image_public_id_exist);
             }
-            
+
             $user = User::find(Auth::user()->id);
             $user->public_id = $public_id;
             $user->avatar_url = $image_url;
             $user->update();
             return back()->with('success_msg', 'Media successfully updated!');
         } else {
+
             return view('media');
         }
     }
